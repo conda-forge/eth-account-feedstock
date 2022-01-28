@@ -28,7 +28,6 @@ requirements:
     - eth-rlp >=0.3.0,<1
     - eth-utils >=2.0.0,<3
     - hexbytes >=0.1.0,<1
-    - rlp >=1.0.0,<2
 
 test:
   imports:
