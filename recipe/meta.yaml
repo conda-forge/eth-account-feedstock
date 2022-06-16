@@ -1,5 +1,5 @@
 {% set name = "eth-account" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ffae2b8be86320a4159ae90300804a6a9d34fd72c2ba8d4be7fabc0be833d65d
+  sha256: 54b0b7d661e73f4cd12d508c9baa5c9a6e8c194aa7bafc39277cd673683ae50e
 
 build:
   number: 0
