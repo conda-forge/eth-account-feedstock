@@ -34,8 +34,6 @@ test:
   imports:
     - eth_account
     - eth_account._utils
-  commands:
-    - pip check
   requires:
     - pip
 
