@@ -1,5 +1,5 @@
 {% set name = "eth-account" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5f66ecb7bc52569924dfaf4a9add501b1c2a4901eec74e3c0598cd26d0971777
+  sha256: 474a2fccf7286230cf66502565f03b536921d7e1fdfceba198e42160e5ac4bc1
 
 build:
   number: 0
@@ -29,7 +29,7 @@ requirements:
     - eth-utils >=2.0.0
     - hexbytes >=0.1.0
     - rlp >=1
-    
+
 test:
   imports:
     - eth_account
