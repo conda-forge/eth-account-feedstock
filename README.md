@@ -1,11 +1,11 @@
-About eth-account
-=================
+About eth-account-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/eth-account-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ethereum/eth-account
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/eth-account-feedstock/blob/main/LICENSE.txt)
 
 Summary: eth-account: Sign Ethereum transactions and messages with local private keys
 
