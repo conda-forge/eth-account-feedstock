@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6,<4.0
+    - python >=3.7,<4.0
   run:
     - python >=3.6,<4.0
     - bitarray >=2.4.0
@@ -27,8 +27,8 @@ requirements:
     - eth-keys >=0.4.0
     - eth-rlp >=0.3.0
     - eth-utils >=2.0.0
-    - hexbytes >=0.1.0
-    - rlp >=1
+    - hexbytes >=0.1.0,<0.4.0
+    - rlp >=1.0.0
 
 test:
   imports:
