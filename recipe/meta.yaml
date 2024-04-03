@@ -25,10 +25,12 @@ requirements:
     - eth-abi >=4.0.0b2
     - eth-keyfile >=0.6.0
     - eth-keys >=0.4.0
-    - eth-rlp >=0.3.0
+    - eth-rlp >=2.1.0
     - eth-utils >=2.0.0
-    - hexbytes >=0.1.0,<0.4.0
+    - hexbytes >=1.2.0
     - rlp >=1.0.0
+    - ckzg >=0.4.3
+    - pydantic >=2.4.0
 
 test:
   imports:
