@@ -18,10 +18,10 @@ build:
 requirements:
   host:
     - pip
-    - python {{ python_min }}
+    - python
     - setuptools
   run:
-    - python >={{ python_min }}
+    - python
     - bitarray >=2.4.0
     - eth-abi >=4.0.0b2
     - eth-keyfile >=0.6.0
