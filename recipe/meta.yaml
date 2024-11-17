@@ -1,5 +1,5 @@
 {% set name = "eth-account" %}
-{% set version = "0.12.1" %}
+{% set version = "0.12.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0374c5886f35780e1f23e50ce6b0482f3387646eceda544e97d69f17f6c216ee
+  sha256: abb995aff8db969fecf2e1233d307bf69389623bb6fd1cdbfbd96725f7449ebd
 
 build:
   number: 0
@@ -31,7 +31,7 @@ requirements:
     - hexbytes >=1.2.0
     - rlp >=1.0.0
     - ckzg >=0.4.3
-    - pydantic >=2.4.0
+    - pydantic >=2.0.0
 
 test:
   imports:
