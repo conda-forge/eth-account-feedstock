@@ -17,6 +17,8 @@ build:
 
 outputs:
   - name: eth-account
+    build:
+      noarch: python
     requirements:
       host:
         - pip
@@ -34,6 +36,13 @@ outputs:
         - rlp >=1.0.0
         - ckzg >=0.4.3
         - pydantic >=2.0.0
+      test:
+        requires:
+          - pip
+        commands:
+          - pip check
+        imports:
+          - eth-account
 
   - name: eth_account
     build:
@@ -45,13 +54,6 @@ outputs:
       imports:
         - eth_account
 
-
-test:
-  imports:
-    - eth_account
-    - eth_account._utils
-  requires:
-    - pip
 
 about:
   home: https://github.com/ethereum/eth-account
