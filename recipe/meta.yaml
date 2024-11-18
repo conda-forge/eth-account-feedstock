@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/eth_account-{{ version }}.tar.gz
   sha256: abb995aff8db969fecf2e1233d307bf69389623bb6fd1cdbfbd96725f7449ebd
 
 build:
@@ -15,23 +15,36 @@ build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
-requirements:
-  host:
-    - pip
-    - python {{ python_min }}
-    - setuptools
-  run:
-    - python >={{ python_min }}
-    - bitarray >=2.4.0
-    - eth-abi >=4.0.0b2
-    - eth-keyfile >=0.6.0
-    - eth-keys >=0.4.0
-    - eth-rlp >=2.1.0
-    - eth-utils >=2.0.0
-    - hexbytes >=1.2.0
-    - rlp >=1.0.0
-    - ckzg >=0.4.3
-    - pydantic >=2.0.0
+outputs:
+  - name: eth-account
+    requirements:
+      host:
+        - pip
+        - python {{ python_min }}
+        - setuptools
+      run:
+        - python >={{ python_min }}
+        - bitarray >=2.4.0
+        - eth-abi >=4.0.0b2
+        - eth-keyfile >=0.6.0
+        - eth-keys >=0.4.0
+        - eth-rlp >=2.1.0
+        - eth-utils >=2.0.0
+        - hexbytes >=1.2.0
+        - rlp >=1.0.0
+        - ckzg >=0.4.3
+        - pydantic >=2.0.0
+
+  - name: eth_account
+    build:
+      noarch: python
+    requirements:
+      run:
+        - {{ pin_subpackage('eth-account', max_pin="x.x.x") }}
+    test:
+      imports:
+        - eth_account
+
 
 test:
   imports:
