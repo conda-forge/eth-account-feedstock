@@ -36,13 +36,13 @@ outputs:
         - rlp >=1.0.0
         - ckzg >=0.4.3
         - pydantic >=2.0.0
-      test:
-        requires:
-          - pip
-        commands:
-          - pip check
-        imports:
-          - eth-account
+    test:
+      requires:
+        - pip
+      commands:
+        - pip check
+      imports:
+        - eth-account
 
   - name: eth_account
     build:
