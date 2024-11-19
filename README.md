@@ -28,6 +28,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-eth--account-green.svg)](https://anaconda.org/conda-forge/eth-account) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/eth-account.svg)](https://anaconda.org/conda-forge/eth-account) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/eth-account.svg)](https://anaconda.org/conda-forge/eth-account) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/eth-account.svg)](https://anaconda.org/conda-forge/eth-account) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-eth_account-green.svg)](https://anaconda.org/conda-forge/eth_account) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/eth_account.svg)](https://anaconda.org/conda-forge/eth_account) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/eth_account.svg)](https://anaconda.org/conda-forge/eth_account) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/eth_account.svg)](https://anaconda.org/conda-forge/eth_account) |
 
 Installing eth-account
 ======================
@@ -39,16 +40,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `eth-account` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `eth-account, eth_account` can be installed with `conda`:
 
 ```
-conda install eth-account
+conda install eth-account eth_account
 ```
 
 or with `mamba`:
 
 ```
-mamba install eth-account
+mamba install eth-account eth_account
 ```
 
 It is possible to list all of the versions of `eth-account` available on your platform with `conda`:
