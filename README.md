@@ -145,6 +145,3 @@ Feedstock Maintainers
 
 * [@step21](https://github.com/step21/)
 
-
-<!-- dummy commit to enable rerendering -->
-
