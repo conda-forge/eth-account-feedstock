@@ -1,5 +1,5 @@
 {% set name = "eth-account" %}
-{% set version = "0.13.1" %}
+{% set version = "0.13.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/eth_account-{{ version }}.tar.gz
-  sha256: a42a613481fda9d27e5e355f15e0ea24fd42ebdf01b0c074e399acddce5087a3
+  sha256: 64f353efc4df5498ff068e6de5b36280cc2ff203e3ec9bdcf363a138d21d149e 
 
 build:
   number: 0
@@ -34,7 +34,7 @@ outputs:
         - eth-utils >=2.0.0
         - hexbytes >=1.2.0
         - rlp >=1.0.0
-        - ckzg >=0.4.3
+        - ckzg >=2.0.0
         - pydantic >=2.0.0
     test:
       requires:
