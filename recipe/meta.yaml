@@ -1,5 +1,5 @@
 {% set name = "eth-account" %}
-{% set version = "0.13.2" %}
+{% set version = "0.13.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/eth_account-{{ version }}.tar.gz
-  sha256: 64f353efc4df5498ff068e6de5b36280cc2ff203e3ec9bdcf363a138d21d149e 
+  sha256: 03d6af5d314e64b3dd53283e15b24736c5caa24542e5edac0455d6ff87d8b1e0
 
 build:
   number: 0
@@ -28,7 +28,7 @@ outputs:
         - python >={{ python_min }}
         - bitarray >=2.4.0
         - eth-abi >=4.0.0b2
-        - eth-keyfile >=0.6.0
+        - eth-keyfile >=0.7.0
         - eth-keys >=0.4.0
         - eth-rlp >=2.1.0
         - eth-utils >=2.0.0
