@@ -13,7 +13,9 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install . -vv
+  script:
+    - export SETUPTOOLS_SCM_PRETEND_VERSION="{{ version }}"
+    - python -m pip install . -vv
 
 outputs:
   - name: eth-account
@@ -24,6 +26,7 @@ outputs:
         - pip
         - python {{ python_min }}
         - setuptools
+        - setuptools-scm
       run:
         - python >={{ python_min }}
         - bitarray >=2.4.0
