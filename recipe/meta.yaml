@@ -1,5 +1,5 @@
 {% set name = "eth-account" %}
-{% set version = "0.13.7" %}
+{% set version = "0.14.0" %}
 
 
 package:
@@ -7,13 +7,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/eth_account-{{ version }}.tar.gz
-  sha256: 5853ecbcbb22e65411176f121f5f24b8afeeaf13492359d254b16d8b18c77a46
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/eth_account-{{ version }}.tar.gz
+  sha256: 2c8291b1a8fcbd29a55b07f75f0a0aaffd04704d3ec28d1396587f18a5541c6d
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install . -vv
+  script:
+    - export SETUPTOOLS_SCM_PRETEND_VERSION="{{ version }}"
+    - python -m pip install . -vv
+    - rm -rf ${SP_DIR}/docs   # [unix]
+    - rmdir /s /q %SP_DIR%\docs   # [win]
 
 outputs:
   - name: eth-account
@@ -24,16 +28,17 @@ outputs:
         - pip
         - python {{ python_min }}
         - setuptools
+        - setuptools-scm
       run:
         - python >={{ python_min }}
         - bitarray >=2.4.0
-        - eth-abi >=4.0.0b2
-        - eth-keyfile >=0.7.0,<0.9.0
-        - eth-keys >=0.4.0
-        - eth-rlp >=2.1.0
-        - eth-utils >=2.0.0
-        - hexbytes >=1.2.0
-        - rlp >=1.0.0
+        - eth-abi >=4.0.0
+        - eth-keyfile >=0.10.0
+        - eth-keys >=0.5.0
+        - eth-rlp >=3.0.0
+        - eth-utils >=6.0.0
+        - hexbytes >=2.0.0
+        - rlp >=2.0.0
         - ckzg >=2.0.0
         - pydantic >=2.0.0
     test:
