@@ -1,4 +1,4 @@
-z{% set name = "eth-account" %}
+{% set name = "eth-account" %}
 {% set version = "0.14.0" %}
 
 
